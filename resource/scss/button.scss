@@ -12,7 +12,19 @@
 
 .btn {
   box-shadow: none!important;
-  transition: .25s;
+  transition: color .25s, background-color .25s;
+
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   &:focus {
     box-shadow: none;

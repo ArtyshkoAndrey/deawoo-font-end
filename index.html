@@ -123,11 +123,40 @@
     </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white" id="second__navbar">
-    <div class="container-lg">
-      <ul class="navbar-nav d-none d-lg-flex w-100">
-        <li class="nav-item d-flex">
-          <img src="public/img/logo.jpg" class="img-fluid" alt="avatar">
+  <nav class="navbar navbar-expand-lg d-none d-lg-flex navbar-light bg-white" id="second__navbar">
+    <div class="container-lg h-100">
+      <ul class="navbar-nav w-100 h-100">
+        <li class="nav-item navbar-brand d-flex me-auto">
+          <img src="public/img/logo.jpg" class="h-100 w-auto" alt="avatar">
+          <h1>Тестовое задание</h1>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Спецтехника
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+            <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Запчасти
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+            <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="">Контакты</a>
+        </li>
+
+        <li class="ms-auto nav-item">
+          <a class="btn btn-danger" href="">Получить консультацию</a>
         </li>
       </ul>
     </div>
