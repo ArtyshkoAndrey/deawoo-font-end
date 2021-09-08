@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="public/css/index.css">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Главная страница</title>
+</head>
+<body>
+
+<header>
+  <nav id="first__navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-lg">
+      <div class="row align-items-center w-100 not__collapsed d-flex d-lg-none">
+        <div class="col-auto">
+          <img src="public/img/avatar.jpg" class="img-fluid" alt="avatar">
+        </div>
+        <div class="col-auto ms-auto">
+          <a class="nav-link px-0" href="tel:+7 (391) 200‒00‒00">+7 (391) 200‒00‒00</a>
+        </div>
+        <div class="col-auto">
+          <button id="mobile__button_search">
+
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.8179 11.8184L19.9995 19.9998" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.5451 7.27238C13.5451 10.7365 10.7368 13.5448 7.27254 13.5448C3.80829 13.5448 1 10.7365 1 7.27238C1 3.80826 3.80829 1 7.27254 1C10.7368 1 13.5451 3.80826 13.5451 7.27238Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+
+          </button>
+        </div>
+        <div class="col-auto">
+          <button class="navbar-toggler collapsed"
+                  type="button"
+                  id="toggler"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse__first_navbar"
+                  aria-controls="collapse__first_navbar"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="collapse__first_navbar">
+        <ul class="navbar-nav d-flex justify-content-between w-100">
+
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-end" aria-current="page" href="#">
+
+              <svg id="location" width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 3.51562C5.0701 3.51562 3.5 5.09273 3.5 7.03125C3.5 8.95738 5.04455 10.5469 7 10.5469C8.97956 10.5469 10.5 8.93621 10.5 7.03125C10.5 5.09273 8.9299 3.51562 7 3.51562ZM7 9.38281C5.70667 9.38281 4.65889 8.32684 4.65889 7.03125C4.65889 5.73891 5.7134 4.67969 7 4.67969C8.2866 4.67969 9.33722 5.73891 9.33722 7.03125C9.33722 8.30793 8.31382 9.38281 7 9.38281Z" fill="white"/>
+                <path d="M7 0C3.1402 0 0 3.15422 0 7.03125C0 8.34117 0.361239 9.61953 1.04491 10.7286L6.60154 19.723C6.70798 19.8953 6.89551 20 7.09718 20C7.09874 20 7.10026 20 7.10181 20C7.30524 19.9984 7.49315 19.8905 7.59765 19.7152L13.0127 10.6336C13.6586 9.54797 14 8.30231 14 7.03125C14 3.15422 10.8598 0 7 0ZM12.0115 10.032L7.08836 18.2885L2.03649 10.1112C1.46743 9.18805 1.15889 8.12305 1.15889 7.03125C1.15889 3.80039 3.7835 1.16406 7 1.16406C10.2165 1.16406 12.8372 3.80039 12.8372 7.03125C12.8372 8.09066 12.549 9.12844 12.0115 10.032Z" fill="white"/>
+              </svg>
+
+              <span>Красноярск</span>
+            </a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link" href="mailto:PHP-baby@test.ru">PHP-baby@test.ru</a>
+          </li>
+
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link" href="tel:+7 (391) 200‒00‒00">+7 (391) 200‒00‒00</a>
+          </li>
+
+          <li class="nav-item align-content-center d-none d-lg-flex">
+            <form class="d-flex">
+              <label for="search" class="d-none">Поиск</label>
+              <input class="" type="text" name="search" id="search" placeholder="Поиск">
+              <button class="btn btn-light" type="submit">
+                <img src="public/img/svg/search_icon.svg" alt="">
+              </button>
+            </form>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex justify-content-center h-100">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Спецтехника
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Запчасти
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+        <a class="btn btn-danger d-block position-fixed" href="#">
+          получить консультацию
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <div id="search__mobile_block">
+    <form class="d-flex">
+      <label for="search__mobile" class="d-none">Поиск</label>
+      <input class="" type="text" name="search" id="search__mobile" placeholder="Поиск">
+      <button class="btn btn-light" type="submit">
+        <img src="public/img/svg/search_icon.svg" alt="">
+      </button>
+    </form>
+  </div>
+
+
+</header>
+
+
+<script src="public/js/app.js"></script>
+</body>
+</html>

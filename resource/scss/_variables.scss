@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import "~bootstrap/scss/mixins";
+
+$body-bg: #FFFFFF;
+$font-family-base: 'Open Sans', sans-serif;
+$body-color: #161616;
+
+$primary: #120C5A;
+$danger: #FC0000;
+$dark: #161616;
+$white: #FFFFFF;
+$gray: #F5F5F5;
+
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px);
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1174px,
+        xxl: 1360px
+);
+$grid-gutter-widths: (
+        xs: 16px,
+        sm: 16px,
+        md: 20px,
+        lg: 24px,
+        xl: 24px,
+        xxl: 24px,
+);
+// Default Bootstrap gutter width variable.
+$grid-gutter-width: map-get($grid-gutter-widths, lg);
+
+/// Mixin to manage responsive breakpoints
+/// @author Fulliton
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-up($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($grid-breakpoints)}.";
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($grid-breakpoints)}.";
+  }
+}

@@ -1,0 +1,164 @@
+@import "../variables";
+.navbar-toggler {
+  border: 0;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+#first__navbar.navbar {
+  height: 59px;
+
+  .not__collapsed {
+    .nav-link {
+      transition: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  #mobile__button_search {
+    background-color: transparent;
+    border: none;
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  .nav-link {
+    color: $white;
+  }
+
+  #location {
+    margin-right: 10px;
+    path {
+      fill: $white;
+    }
+  }
+
+  li {
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  form {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    input {
+      background-color: $primary;
+      border: 2px solid $white;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+      width: 250px;
+      color: $white;
+      direction: ltr;
+      font-size: 16px;
+      padding: 0 10px;
+
+      &:focus {
+        outline-style: none;
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+        text-align: right;
+      }
+
+    }
+
+    button {
+      line-height: normal;
+      //padding: 14px 10px;
+      border-radius: 0 2px 2px 0;
+      border-color: $white;
+
+      &:focus {
+        box-shadow: none!important;
+        border-color: $white;
+      }
+    }
+  }
+
+  @include respond-up(lg) {
+    .navbar-collapse {
+      opacity: 1;
+      transition: opacity 0.4s ease-in;
+      -ms-transition: opacity 0.4s ease-in;
+      -moz-transition: opacity 0.4s ease-in;
+      -webkit-transition: opacity 0.4s ease-in;
+
+      &:not(.show) {
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+        -ms-transition: opacity 0.4s ease-out;
+        -moz-transition: opacity 0.4s ease-out;
+        -webkit-transition: opacity 0.4s ease-out;
+      }
+
+
+      width: 100%;
+      padding: 28px 20px 28px 20px;
+      left: 0;
+      position: fixed;
+      top: 59px;
+      height: calc(100vh - 59px) !important;
+      background-color: $white;
+
+      .btn.btn-danger {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+      }
+
+      .nav-item {
+        .nav-link {
+          color: $primary;
+
+        }
+      }
+
+      #location {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
+#search__mobile_block {
+  opacity: 0;
+  display: none;
+
+  transition: opacity 0.4s ease-out;
+  -ms-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -webkit-transition: opacity 0.4s ease-out;
+
+  position: fixed;
+  top: 59px;
+  width: 100vw;
+  height: auto;
+  left: 0;
+
+
+  &.show {
+    opacity: 1;
+    display: block;
+    transition: opacity 0.4s ease-out;
+    -ms-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    -webkit-transition: opacity 0.4s ease-out;
+  }
+
+}
+
+@import "toggler";

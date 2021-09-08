@@ -1,0 +1,34 @@
+@import "variables";
+
+.btn.btn-danger {
+  color: $white;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  padding: 17px 6px;
+  border-radius: 2px;
+  border: 1px solid $danger;
+}
+
+.btn {
+  box-shadow: none!important;
+  transition: .25s;
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+.btn-danger {
+  &:focus {
+    background-color: #DC0303;
+    border: 1px solid #DC0303;
+  }
+  &:hover {
+    background-color: $white;
+    color: $danger;
+    border: 1px solid $danger;
+  }
+
+}

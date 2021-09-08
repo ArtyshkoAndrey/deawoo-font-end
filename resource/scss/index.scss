@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/functions";
+
+@import "variables";
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/bootstrap-utilities';
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/buttons";
+
+@import "button";
+@import 'header';
+
+@each $name, $width in $grid-breakpoints {
+  $gutter: map-get($grid-gutter-widths, $name);
+  @include respond-to($name) {
+    .col, [class*="col-"] {
+      padding: 0 $gutter * .5!important;
+    }
+
+    .row {
+      margin: 0 $gutter * -.5;
+    }
+  }
+}
