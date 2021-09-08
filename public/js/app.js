@@ -3090,6 +3090,43 @@ function within(min, value, max) {
 
 /***/ }),
 
+/***/ "./resource/js/app.js":
+/*!****************************!*\
+  !*** ./resource/js/app.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  // let inputSearch = document.getElementById('search')
+  //
+  // if (inputSearch) {
+  //   inputSearch.addEventListener('keyup', function (e) {
+  //     if(this.value === '') {
+  //       this.style.textAlign = 'right'
+  //     } else {
+  //       this.style.textAlign = 'left'
+  //     }
+  //   })
+  // }
+  var mobile__button_search = document.getElementById('mobile__button_search');
+  mobile__button_search.addEventListener('click', function (e) {
+    var firstNavbar = document.getElementById('first__navbar');
+    var searchMobileBlock = document.getElementById('search__mobile_block');
+    var collapse = firstNavbar.querySelector('.navbar-collapse');
+
+    if (collapse.classList.contains('show')) {
+      document.getElementById('toggler').click();
+    }
+
+    searchMobileBlock.classList.toggle("show");
+  });
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.esm.js ***!
@@ -8113,43 +8150,6 @@ defineJQueryPlugin(Toast);
 
 //# sourceMappingURL=bootstrap.esm.js.map
 
-
-/***/ }),
-
-/***/ "./resource/js/app.js":
-/*!****************************!*\
-  !*** ./resource/js/app.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-
-document.addEventListener('DOMContentLoaded', function () {
-  // let inputSearch = document.getElementById('search')
-  //
-  // if (inputSearch) {
-  //   inputSearch.addEventListener('keyup', function (e) {
-  //     if(this.value === '') {
-  //       this.style.textAlign = 'right'
-  //     } else {
-  //       this.style.textAlign = 'left'
-  //     }
-  //   })
-  // }
-  var mobile__button_search = document.getElementById('mobile__button_search');
-  mobile__button_search.addEventListener('click', function (e) {
-    var firstNavbar = document.getElementById('first__navbar');
-    var searchMobileBlock = document.getElementById('search__mobile_block');
-    var collapse = firstNavbar.querySelector('.navbar-collapse');
-
-    if (collapse.classList.contains('show')) {
-      document.getElementById('toggler').click();
-    }
-
-    searchMobileBlock.classList.toggle("show");
-  });
-});
 
 /***/ }),
 

@@ -6,42 +6,7 @@
     box-shadow: none;
   }
 }
-#first__navbar.navbar {
-  height: 59px;
-
-  .not__collapsed {
-    .nav-link {
-      transition: none;
-      font-size: 14px;
-      font-weight: bold;
-    }
-  }
-
-  #mobile__button_search {
-    background-color: transparent;
-    border: none;
-    &:focus {
-      outline: 0;
-      box-shadow: none;
-    }
-  }
-
-  .nav-link {
-    color: $white;
-  }
-
-  #location {
-    margin-right: 10px;
-    path {
-      fill: $white;
-    }
-  }
-
-  li {
-    line-height: 24px;
-    font-size: 18px;
-    font-weight: 700;
-  }
+#first__navbar {
 
   form {
     padding-top: 0.5rem;
@@ -83,51 +48,89 @@
     }
   }
 
-  @include respond-up(lg) {
-    .navbar-collapse {
-      opacity: 1;
-      transition: opacity 0.4s ease-in;
-      -ms-transition: opacity 0.4s ease-in;
-      -moz-transition: opacity 0.4s ease-in;
-      -webkit-transition: opacity 0.4s ease-in;
+  &.navbar {
+    height: 59px;
 
-      &:not(.show) {
-        opacity: 0;
-        transition: opacity 0.4s ease-out;
-        -ms-transition: opacity 0.4s ease-out;
-        -moz-transition: opacity 0.4s ease-out;
-        -webkit-transition: opacity 0.4s ease-out;
+    .not__collapsed {
+      .nav-link {
+        transition: none;
+        font-size: 14px;
+        font-weight: bold;
       }
+    }
 
-
-      width: 100%;
-      padding: 28px 20px 28px 20px;
-      left: 0;
-      position: fixed;
-      top: 59px;
-      height: calc(100vh - 59px) !important;
-      background-color: $white;
-
-      .btn.btn-danger {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
+    #mobile__button_search {
+      background-color: transparent;
+      border: none;
+      &:focus {
+        outline: 0;
+        box-shadow: none;
       }
+    }
 
-      .nav-item {
-        .nav-link {
-          color: $primary;
+    .nav-link {
+      color: $white;
+    }
 
+    #location {
+      margin-right: 10px;
+      path {
+        fill: $white;
+      }
+    }
+
+    li {
+      line-height: 24px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    @include respond-up(lg) {
+      .navbar-collapse {
+        opacity: 1;
+        transition: opacity 0.4s ease-in;
+        -ms-transition: opacity 0.4s ease-in;
+        -moz-transition: opacity 0.4s ease-in;
+        -webkit-transition: opacity 0.4s ease-in;
+
+        &:not(.show) {
+          opacity: 0;
+          transition: opacity 0.4s ease-out;
+          -ms-transition: opacity 0.4s ease-out;
+          -moz-transition: opacity 0.4s ease-out;
+          -webkit-transition: opacity 0.4s ease-out;
         }
-      }
 
-      #location {
-        path {
-          fill: $primary;
+
+        width: 100%;
+        padding: 28px 20px 28px 20px;
+        left: 0;
+        position: fixed;
+        top: 59px;
+        height: calc(100vh - 59px) !important;
+        background-color: $white;
+
+        .btn.btn-danger {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+        }
+
+        .nav-item {
+          .nav-link {
+            color: $primary;
+
+          }
+        }
+
+        #location {
+          path {
+            fill: $primary;
+          }
         }
       }
     }
@@ -135,30 +138,44 @@
 }
 
 #search__mobile_block {
+  transition: opacity 1s ease-out;
   opacity: 0;
-  display: none;
-
-  transition: opacity 0.4s ease-out;
-  -ms-transition: opacity 0.4s ease-out;
-  -moz-transition: opacity 0.4s ease-out;
-  -webkit-transition: opacity 0.4s ease-out;
+  height: 0;
+  overflow: hidden;
 
   position: fixed;
   top: 59px;
   width: 100vw;
-  height: auto;
   left: 0;
 
-
   &.show {
-    opacity: 1;
-    display: block;
-    transition: opacity 0.4s ease-out;
-    -ms-transition: opacity 0.4s ease-out;
-    -moz-transition: opacity 0.4s ease-out;
-    -webkit-transition: opacity 0.4s ease-out;
+    @include respond-up(lg) {
+      opacity: 1;
+      height: auto;
+    }
   }
 
+  form {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    input {
+      width: 100%;
+      height: 50px;
+    }
+  }
 }
+
+#second__navbar {
+  &.navbar {
+    height: 96px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 22px 0;
+  }
+}
+
+
 
 @import "toggler";
