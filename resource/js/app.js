@@ -75,6 +75,14 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('toggler').click()
       }
     }
+
+    // if (width <= 768) {
+    //   let a = document.querySelectorAll('footer a[data-toggle="collapse"]')
+    //   a.dataset.bsToggle = "collapse"
+    // } else {
+    //   let a = document.querySelectorAll('footer a[data-toggle="collapse"]')
+    //   a.dataset.bsToggle = ""
+    // }
   }, true);
 
   /*
