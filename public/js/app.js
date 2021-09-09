@@ -8185,24 +8185,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nouislider */ "./node_modules/nouislider/dist/nouislider.js");
 /* harmony import */ var nouislider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nouislider__WEBPACK_IMPORTED_MODULE_1__);
+/*
+ * Copyright (c) 2021.
+ * This code is the property of the Fulliton developer.
+ * Write all questions and suggestions on the Vkontakte social network https://vk.com/fulliton
+ */
 
+
+/*
+ * If the page is loaded - Start
+ */
 
 document.addEventListener('DOMContentLoaded', function () {
-  // let inputSearch = document.getElementById('search')
-  //
-  // if (inputSearch) {
-  //   inputSearch.addEventListener('keyup', function (e) {
-  //     if(this.value === '') {
-  //       this.style.textAlign = 'right'
-  //     } else {
-  //       this.style.textAlign = 'left'
-  //     }
-  //   })
-  // }
+  /*
+  * mobileButtonSearch   - button to open mobile search
+  * firstNavbar          - first menu n header
+  * collapseFirstNavbar  - dropdown block
+  * searchMobileBlock    - block with mobile search
+  * filterOptions        - filtering blocks with slider
+  * sliders              - sections for switching photos
+  * scrollPosition       - positioning, IOS fix
+  */
   var mobileButtonSearch = document.getElementById('mobile__button_search');
   var firstNavbar = document.getElementById('first__navbar');
   var collapseFirstNavbar = firstNavbar.querySelector('#collapse__first_navbar');
   var searchMobileBlock = document.getElementById('search__mobile_block');
+  var filterOptions = document.getElementsByClassName('filter__options');
+  var sliders = document.getElementsByClassName('slider');
+  var scrollPosition;
+  /*
+   * Listener if you have opened mobile search
+   */
+
   mobileButtonSearch.addEventListener('click', function (e) {
     if (collapseFirstNavbar.classList.contains('show')) {
       document.getElementById('toggler').click();
@@ -8210,70 +8224,115 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchMobileBlock.classList.toggle("show");
   });
+  /*
+   * Listener if the menu is open, for mobile phones
+   */
+
   collapseFirstNavbar.addEventListener('show.bs.collapse', function () {
     if (searchMobileBlock.classList.contains('show')) {
       searchMobileBlock.classList.toggle("show");
     }
 
     document.body.style.overflowY = 'hidden';
+    scrollPosition = window.pageYOffset;
+    document.body.style.position = 'fixed';
+    document.body.style.top = "-".concat(scrollPosition, "px");
+    document.body.style.width = '100%';
   });
-  collapseFirstNavbar.addEventListener('hidden.bs.collapse', function () {
-    document.body.style.overflowY = 'auto';
-  });
-  var filterOptions = document.getElementsByClassName('filter__options');
-  Array.from(filterOptions).forEach(function (filter) {
-    console.log(filter.dataset);
-    var uiMin = Number(filter.dataset.uiMin);
-    var uiMax = Number(filter.dataset.uiMax);
-    var range = filter.querySelector('.range');
-    var startInput = filter.querySelector('input.start__range');
-    var endInput = filter.querySelector('input.end__range');
-    console.log(startInput, endInput);
-    nouislider__WEBPACK_IMPORTED_MODULE_1__.create(range, {
-      range: {
-        'min': uiMin,
-        'max': uiMax
-      },
-      step: 1,
-      start: [uiMin, uiMax],
-      connect: true,
-      orientation: 'horizontal'
-    });
-    range.noUiSlider.on('update', function (values, handle) {
-      var value = Number(values[handle]);
+  /*
+   * Listener if the menu is closed, for mobile phones
+   */
 
-      if (handle) {
-        endInput.value = Number(value);
-      } else {
-        startInput.value = Number(value);
-      }
-    });
-    startInput.addEventListener('change', function () {
-      range.noUiSlider.set([this.value, null]);
-    });
-    endInput.addEventListener('change', function () {
-      range.noUiSlider.set([null, this.value]);
-    });
+  collapseFirstNavbar.addEventListener('hidden.bs.collapse', function () {
+    document.body.style.removeProperty('overflow');
+    document.body.style.removeProperty('position');
+    document.body.style.removeProperty('top');
+    document.body.style.removeProperty('width');
+    window.scrollTo(0, scrollPosition);
   });
-  var sliders = document.getElementsByClassName('slider');
-  Array.from(sliders).forEach(function (slider) {
-    var sections = slider.querySelectorAll('.section');
-    var slides = slider.querySelectorAll('img');
-    sections.forEach(function (section) {
-      section.addEventListener('mouseenter', function (e) {
-        var lastIndicator = Array.from(sections).find(function (e) {
-          return e.querySelectorAll('.indicator')[0].classList.contains('indicator_full');
-        });
-        console.log(lastIndicator);
-        lastIndicator.querySelectorAll('.indicator')[0].classList.remove('indicator_full');
-        this.querySelectorAll('.indicator')[0].classList.add('indicator_full');
-        changeSlide(e.target, slides);
+  /*
+   * Auto close menu if screen is desktop
+   */
+
+  window.addEventListener('resize', function (event) {
+    var height = event.target.innerHeight;
+    var width = event.target.innerWidth;
+
+    if (width >= 992) {
+      if (collapseFirstNavbar.classList.contains('show')) {
+        document.getElementById('toggler').click();
+      }
+    }
+  }, true);
+  /*
+   * Initializing Filters
+   */
+
+  if (filterOptions) {
+    Array.from(filterOptions).forEach(function (filter) {
+      console.log(filter.dataset);
+      var uiMin = Number(filter.dataset.uiMin);
+      var uiMax = Number(filter.dataset.uiMax);
+      var range = filter.querySelector('.range');
+      var startInput = filter.querySelector('input.start__range');
+      var endInput = filter.querySelector('input.end__range');
+      console.log(startInput, endInput);
+      nouislider__WEBPACK_IMPORTED_MODULE_1__.create(range, {
+        range: {
+          'min': uiMin,
+          'max': uiMax
+        },
+        step: 1,
+        start: [uiMin, uiMax],
+        connect: true,
+        orientation: 'horizontal'
+      });
+      range.noUiSlider.on('update', function (values, handle) {
+        var value = Number(values[handle]);
+
+        if (handle) {
+          endInput.value = Number(value);
+        } else {
+          startInput.value = Number(value);
+        }
+      });
+      startInput.addEventListener('change', function () {
+        range.noUiSlider.set([this.value, null]);
+      });
+      endInput.addEventListener('change', function () {
+        range.noUiSlider.set([null, this.value]);
       });
     });
-  });
+  }
+  /*
+   * Initialization of sliders
+   */
 
-  function changeSlide(section, slides) {
-    slides.forEach(function (slide) {
+
+  if (sliders) {
+    Array.from(sliders).forEach(function (slider) {
+      var sections = slider.querySelectorAll('.section');
+      var imgInSlider = slider.querySelectorAll('img');
+      sections.forEach(function (section) {
+        section.addEventListener('mouseenter', function (e) {
+          var lastIndicator = Array.from(sections).find(function (e) {
+            return e.querySelectorAll('.indicator')[0].classList.contains('indicator_full');
+          });
+          console.log(lastIndicator);
+          lastIndicator.querySelectorAll('.indicator')[0].classList.remove('indicator_full');
+          this.querySelectorAll('.indicator')[0].classList.add('indicator_full');
+          changeSlide(e.target, imgInSlider);
+        });
+      });
+    });
+  }
+  /*
+   * toggle sliders in sliders of item
+   */
+
+
+  function changeSlide(section, imgInSlider) {
+    imgInSlider.forEach(function (slide) {
       if (section.dataset.id === slide.dataset.id) slide.classList.remove('opacity-0');else slide.classList.add('opacity-0');
     });
   }

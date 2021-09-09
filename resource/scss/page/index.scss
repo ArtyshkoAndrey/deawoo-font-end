@@ -1,10 +1,36 @@
+/*!
+ * Copyright (c) 2021.
+ * This code is the property of the Fulliton developer.
+ * Write all questions and suggestions on the Vkontakte social network https://vk.com/fulliton
+ */
+
 @import "text";
+@import "../variables";
 
 main {
   padding: 20px 0;
 
   @include respond-to(lg) {
     padding: 40px 0;
+  }
+}
+section {
+  h1, h2 {
+    margin-top: 48px;
+    margin-bottom: 15px;
+
+    @include respond-to(lg) {
+      margin-bottom: 32px;
+    }
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+
+section.section__breadcrumb + section {
+  h1, h2 {
+    margin-top: 20px;
   }
 }
 nav[aria-label=breadcrumb] {
@@ -35,13 +61,109 @@ nav[aria-label=breadcrumb] {
       margin-bottom: 17px;
     }
   }
+}
 
-  & + .row.title {
-    h1 {
-      margin-bottom: 15px;
+
+
+
+
+.info {
+
+  @include respond-up(md) {
+    padding: 0;
+
+    .title h2 {
+      padding: 0 20px;
+    }
+
+    .row {
+      margin: 0;
+
+      [class*="col-"] {
+        padding: 0!important;
+      }
+    }
+    .info__list {
+      padding: 0 16px;
+    }
+
+  }
+
+  .info__card {
+    padding: 20px 24px;
+    color: $white;
+    font-weight: normal;
+
+    &:last-child {
+      margin-top: 0;
 
       @include respond-to(lg) {
-        margin-bottom: 32px;
+        margin-top: 12px;
+      }
+    }
+
+    @include respond-to(md) {
+      padding: 28px 50px;
+    }
+
+    .title {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: bold;
+      color: $white;
+    }
+
+    p {
+      margin-top: 12px;
+      margin-bottom: 0;
+
+      @include respond-to(md) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .info__list {
+    li {
+      padding-top: 53px;
+      padding-left: 0;
+      margin-bottom: 21px;
+      padding-bottom: 0;
+
+      @include respond-to(md) {
+        padding-top: 40px;
+        padding-left: 53px;
+      }
+
+      position: relative;
+
+      .info__list_title {
+        color: $primary;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        width: 60%;
+
+        @include respond-to(md) {
+          width: 50%;
+        }
+      }
+
+      .info__list_index {
+        position: absolute;
+        font-weight: bold;
+        font-size: 79px;
+        line-height: 79px;
+        top: 0;
+        left: 0;
+        color: rgba(252, 0, 0, 0.25);
+      }
+
+      .info__list_description {
+        color: #161616;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
       }
     }
   }

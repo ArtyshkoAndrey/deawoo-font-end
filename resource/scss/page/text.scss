@@ -1,9 +1,15 @@
+/*!
+ * Copyright (c) 2021.
+ * This code is the property of the Fulliton developer.
+ * Write all questions and suggestions on the Vkontakte social network https://vk.com/fulliton
+ */
+
 @import "../variables";
 
 .row.title {
 
-  h1 {
-    font-size: 20px;
+  h1, h2 {
+
     color: $primary;
     font-weight: bold;
     margin-bottom: 15px;
@@ -11,6 +17,14 @@
     @include respond-to(lg) {
       font-size: 40px;
       margin-bottom: 45px;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    @include respond-to(lg) {
+      font-size: 30px;
+      margin-bottom: 30px;
     }
   }
 }

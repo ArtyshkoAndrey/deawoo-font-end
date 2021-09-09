@@ -1,4 +1,11 @@
+/*!
+ * Copyright (c) 2021.
+ * This code is the property of the Fulliton developer.
+ * Write all questions and suggestions on the Vkontakte social network https://vk.com/fulliton
+ */
+
 @import "../variables";
+
 .navbar-toggler {
   border: 0;
 
@@ -6,6 +13,7 @@
     box-shadow: none;
   }
 }
+
 #first__navbar {
 
   form {
@@ -37,12 +45,11 @@
 
     button {
       line-height: normal;
-      //padding: 14px 10px;
       border-radius: 0 2px 2px 0;
       border-color: $white;
 
       &:focus {
-        box-shadow: none!important;
+        box-shadow: none !important;
         border-color: $white;
       }
     }
@@ -50,6 +57,10 @@
 
   &.navbar {
     height: 59px;
+
+    .navbar-collapse {
+      z-index: $header-index;
+    }
 
     .not__collapsed {
       .nav-link {
@@ -62,6 +73,7 @@
     #mobile__button_search {
       background-color: transparent;
       border: none;
+
       &:focus {
         outline: 0;
         box-shadow: none;
@@ -74,6 +86,7 @@
 
     #location {
       margin-right: 10px;
+
       path {
         fill: $white;
       }
@@ -148,6 +161,7 @@
   opacity: 0;
   height: 0;
   overflow: hidden;
+  z-index: $header-index;
 
   position: absolute;
   top: 59px;
@@ -186,6 +200,7 @@
 
       .dropdown-toggle {
         position: relative;
+
         &:after {
           //background-image: url("/public/img/svg/min_arrow_down.svg");
           //background-size: contain;
@@ -239,6 +254,7 @@
           margin-left: 15px;
         }
       }
+
       .nav-link {
         font-weight: bold;
         color: $primary;
@@ -255,7 +271,6 @@
 
   }
 }
-
 
 
 @import "toggler";
