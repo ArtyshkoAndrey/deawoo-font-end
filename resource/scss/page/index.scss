@@ -1,0 +1,48 @@
+@import "text";
+
+main {
+  padding: 20px 0;
+
+  @include respond-to(lg) {
+    padding: 40px 0;
+  }
+}
+nav[aria-label=breadcrumb] {
+  .breadcrumb {
+    margin-bottom: 19px;
+
+    .breadcrumb-item {
+      color: #120C5A;
+
+      a {
+        text-decoration: none;
+      }
+
+      &.active {
+        opacity: .5;
+      }
+
+      & + .breadcrumb-item {
+        padding-left: 5px;
+
+        &::before {
+          padding-right: 5px;
+        }
+      }
+    }
+
+    @include respond-to(lg) {
+      margin-bottom: 17px;
+    }
+  }
+
+  & + .row.title {
+    h1 {
+      margin-bottom: 15px;
+
+      @include respond-to(lg) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

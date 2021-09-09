@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <title>Главная страница</title>
 </head>
-<body style="height: 5000px">
+<body>
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="first__navbar">
@@ -138,25 +138,29 @@
     <div class="container-lg h-100">
       <ul class="navbar-nav w-100 h-100">
         <li class="nav-item navbar-brand d-flex me-auto">
-          <img src="public/img/logo.jpg" class="h-100 w-auto" alt="avatar">
+          <img alt="avatar" class="h-100 w-auto" src="public/img/logo.jpg">
           <h1>Тестовое задание</h1>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a aria-expanded="false" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown"
+             href="#"
+             id="navbarDropdown-1" role="button">
             Спецтехника
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-1">
+          <ul aria-labelledby="navbarDropdown-1" class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
             <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a aria-expanded="false" class="nav-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown"
+             href="#"
+             id="navbarDropdown-2" role="button">
             Запчасти
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-2">
+          <ul aria-labelledby="navbarDropdown-2" class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
             <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
           </ul>
@@ -175,6 +179,729 @@
 
 
 </header>
+
+<main>
+  <!-- Head info -->
+  <section class="container-lg">
+    <!-- Breadcrumb-->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Тестовый проект</a></li>
+        <li class="breadcrumb-item"><a href="#">Автобетононасосы</a></li>
+        <li aria-current="page" class="breadcrumb-item active">Автобетононасос Everdigm 53M на шасси Daewoo Novus</li>
+      </ol>
+    </nav>
+    <!-- End Breadcrumb-->
+    <!-- Title -->
+    <div class="row title">
+      <div class="col-12">
+        <h1>Автобетононасосы</h1>
+      </div>
+    </div>
+    <!-- End Title -->
+  </section>
+  <!-- End Head info -->
+
+  <section class="container-lg">
+    <div class="row">
+      <!--    Filter-->
+      <div class="col-lg-3">
+        <div class="sticky__filter  h-auto">
+          <div class="filter">
+
+            <!-- Button collapse filter-->
+            <button aria-controls="cost__filter"
+                    aria-expanded="false"
+                    class="btn btn-primary btn-filter w-100 collapsed"
+                    data-bs-target="#cost__filter"
+                    data-bs-toggle="collapse"
+                    type="button"
+            >
+              <img alt="options filter" src="public/img/svg/options_white.svg">
+              <span class="me-auto ms-2">Фильтры</span>
+              <img alt="arrow" class="filter__arrow" src="public/img/svg/min_arrow_down_white.svg">
+            </button>
+            <!-- End Button collapse filter-->
+
+            <div class="collapse" id="cost__filter">
+              <div class="card card-body">
+                <!-- Filter option -->
+                <div class="row filter__options"
+                     data-ui-max="1348"
+                     data-ui-min="100"
+                >
+                  <div class="col-12">
+                    <p>Высота подачи, м</p>
+                  </div>
+                  <div class="col-10 text-center filter__inputs">
+                    <div class="row align-items-end row-cols-4">
+                      <div class="col-auto">
+                        <span>от</span>
+                      </div>
+                      <div class="col">
+                        <input class="start__range" type="number">
+                      </div>
+                      <div class="col-auto">
+                        <span>до</span>
+                      </div>
+                      <div class="col">
+                        <input class="end__range" type="number">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="range"></div>
+                  </div>
+                </div>
+                <!--  End Filter option -->
+                <!-- Filter option -->
+                <div class="row filter__options"
+                     data-ui-max="1348"
+                     data-ui-min="100"
+                >
+                  <div class="col-12">
+                    <p>Производительность, МЗ/ч</p>
+                  </div>
+                  <div class="col-10 text-center filter__inputs">
+                    <div class="row align-items-end row-cols-4">
+                      <div class="col-auto">
+                        <span>от</span>
+                      </div>
+                      <div class="col">
+                        <input class="start__range" type="number">
+                      </div>
+                      <div class="col-auto">
+                        <span>до</span>
+                      </div>
+                      <div class="col">
+                        <input class="end__range" type="number">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="range"></div>
+                  </div>
+                </div>
+                <!-- End Filter option -->
+              </div>
+            </div>
+          </div>
+          <div class="filter">
+
+            <!-- Button collapse filter-->
+            <button aria-controls="type__filter"
+                    aria-expanded="false"
+                    class="btn btn-primary btn-filter w-100 collapsed"
+                    data-bs-target="#type__filter"
+                    data-bs-toggle="collapse"
+                    type="button"
+            >
+              <img alt="options filter" src="public/img/svg/mixer_white.svg">
+              <span class="me-auto ms-2">Бетононасосы</span>
+              <img alt="arrow" class="filter__arrow" src="public/img/svg/min_arrow_down_white.svg">
+            </button>
+            <!-- End Button collapse filter-->
+
+            <div class="collapse" id="type__filter">
+              <div class="card card-body">
+                <!-- Filter category option -->
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="active" href="">Автобетононасосы (3)</a>
+                  </li>
+                  <li>
+                    <a href="">Стационарные бетононасосы (0)</a>
+                  </li>
+                  <li>
+                    <a href="">Распределительные стрелы (0)</a>
+                  </li>
+                </ul>
+                <!-- End Filter category option -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Filter-->
+
+      <div class="col-lg-9 items">
+        <div class="row">
+          <!-- Start Item container -->
+          <div class="col-xl-4 col-xxl-3 col-lg-4 col-md-4 col-sm-6">
+            <!-- start Item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-12">
+                  <!-- start Slider -->
+                  <div class="slider">
+                    <img
+                        alt="texture-1"
+                        data-id="1"
+                        src="https://images.unsplash.com/photo-1568438350562-2cae6d394ad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                    >
+                    <img
+                        alt="texture-2"
+                        class="opacity-0"
+                        data-id="2"
+                        src="https://images.unsplash.com/photo-1569742676615-3cbdc18ce09e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    >
+                    <img
+                        alt="texture-3"
+                        class="opacity-0"
+                        data-id="3"
+                        src="https://images.unsplash.com/photo-1570342457319-f17b8f92df09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    >
+
+                    <div class="section" data-id="1">
+                      <div class="indicator indicator_full"></div>
+                    </div>
+                    <div class="section" data-id="2">
+                      <div class="indicator"></div>
+                    </div>
+                    <div class="section" data-id="3">
+                      <div class="indicator"></div>
+                    </div>
+                  </div>
+                  <!-- end Slider -->
+                </div>
+
+                <div class="col-12">
+                  <div class="row item_info">
+                    <div class="col-12">
+                      <p class="item__name mb-0">Бортовой грузовой на шасси DAEWOO NOVUS с КМУ HIAB 190T</p>
+                    </div>
+                    <div class="col-12">
+                      <span class="badge badge__outline_primary">в наличии</span>
+                      <span class="badge badge__outline_danger">лизинг</span>
+                    </div>
+                    <div class="col-12 item__list_specific">
+                      <div class="row">
+                        <ul class="list-unstyled mb-0">
+                          <li class="d-flex justify-content-between">
+                            <span>Год выпуска: </span>
+                            <span class="fw-bold">2012</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Бренд: </span>
+                            <span class="fw-bold">Deawoo</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Высота подъема (м):</span>
+                            <span class="fw-bold">1 000</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Вылет (м): </span>
+                            <span class="fw-bold">23</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-12 item__price">
+                      <div class="d-flex w-100 justify-content-end">
+                        <p class="mb-0 item__old_price">1 500 000 ₽</p>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between item__this_price">
+                        <span>Итого</span>
+                        <span> от 5 500 000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="col-12 item__buy">
+                      <a class="btn btn-danger d-block" href="">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- start Item -->
+          </div>
+          <!-- End Item container -->
+
+
+          <!-- Start Item container -->
+          <div class="col-xl-4 col-xxl-3 col-lg-4 col-md-4 col-sm-6">
+            <!-- start Item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-12">
+                  <!-- start Slider -->
+                  <div class="slider">
+                    <img
+                        alt="texture-1"
+                        data-id="1"
+                        src="https://images.unsplash.com/photo-1568438350562-2cae6d394ad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                    >
+                    <img
+                        alt="texture-2"
+                        class="opacity-0"
+                        data-id="2"
+                        src="https://images.unsplash.com/photo-1569742676615-3cbdc18ce09e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    >
+                    <img
+                        alt="texture-3"
+                        class="opacity-0"
+                        data-id="3"
+                        src="https://images.unsplash.com/photo-1570342457319-f17b8f92df09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    >
+
+                    <div class="section" data-id="1">
+                      <div class="indicator indicator_full"></div>
+                    </div>
+                    <div class="section" data-id="2">
+                      <div class="indicator"></div>
+                    </div>
+                    <div class="section" data-id="3">
+                      <div class="indicator"></div>
+                    </div>
+                  </div>
+                  <!-- end Slider -->
+                </div>
+
+                <div class="col-12">
+                  <div class="row item_info">
+                    <div class="col-12">
+                      <p class="item__name mb-0">Бортовой грузовой на шасси DAEWOO NOVUS с КМУ HIAB 190T</p>
+                    </div>
+                    <div class="col-12">
+                      <span class="badge badge__outline_primary">в наличии</span>
+                      <span class="badge badge__outline_danger">лизинг</span>
+                    </div>
+                    <div class="col-12 item__list_specific">
+                      <div class="row">
+                        <ul class="list-unstyled mb-0">
+                          <li class="d-flex justify-content-between">
+                            <span>Год выпуска: </span>
+                            <span class="fw-bold">2012</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Бренд: </span>
+                            <span class="fw-bold">Deawoo</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Высота подъема (м):</span>
+                            <span class="fw-bold">1 000</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Вылет (м): </span>
+                            <span class="fw-bold">23</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-12 item__price">
+                      <div class="d-flex w-100 justify-content-end">
+                        <p class="mb-0 item__old_price">1 500 000 ₽</p>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between item__this_price">
+                        <span>Итого</span>
+                        <span> от 5 500 000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="col-12 item__buy">
+                      <a class="btn btn-danger d-block" href="">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- start Item -->
+          </div>
+          <!-- End Item container -->
+
+
+          <!-- Start Item container -->
+          <div class="col-xl-4 col-xxl-3 col-lg-4 col-md-4 col-sm-6">
+            <!-- start Item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-12">
+                  <!-- start Slider -->
+                  <div class="slider">
+                    <img
+                        alt="texture-1"
+                        data-id="1"
+                        src="https://images.unsplash.com/photo-1568438350562-2cae6d394ad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                    >
+                    <img
+                        alt="texture-2"
+                        class="opacity-0"
+                        data-id="2"
+                        src="https://images.unsplash.com/photo-1569742676615-3cbdc18ce09e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    >
+                    <img
+                        alt="texture-3"
+                        class="opacity-0"
+                        data-id="3"
+                        src="https://images.unsplash.com/photo-1570342457319-f17b8f92df09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    >
+
+                    <div class="section" data-id="1">
+                      <div class="indicator indicator_full"></div>
+                    </div>
+                    <div class="section" data-id="2">
+                      <div class="indicator"></div>
+                    </div>
+                    <div class="section" data-id="3">
+                      <div class="indicator"></div>
+                    </div>
+                  </div>
+                  <!-- end Slider -->
+                </div>
+
+                <div class="col-12">
+                  <div class="row item_info">
+                    <div class="col-12">
+                      <p class="item__name mb-0">Бортовой грузовой на шасси DAEWOO NOVUS с КМУ HIAB 190T</p>
+                    </div>
+                    <div class="col-12">
+                      <span class="badge badge__outline_primary">в наличии</span>
+                      <span class="badge badge__outline_danger">лизинг</span>
+                    </div>
+                    <div class="col-12 item__list_specific">
+                      <div class="row">
+                        <ul class="list-unstyled mb-0">
+                          <li class="d-flex justify-content-between">
+                            <span>Год выпуска: </span>
+                            <span class="fw-bold">2012</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Бренд: </span>
+                            <span class="fw-bold">Deawoo</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Высота подъема (м):</span>
+                            <span class="fw-bold">1 000</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Вылет (м): </span>
+                            <span class="fw-bold">23</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-12 item__price">
+                      <div class="d-flex w-100 justify-content-end">
+                        <p class="mb-0 item__old_price">1 500 000 ₽</p>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between item__this_price">
+                        <span>Итого</span>
+                        <span> от 5 500 000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="col-12 item__buy">
+                      <a class="btn btn-danger d-block" href="">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- start Item -->
+          </div>
+          <!-- End Item container -->
+
+
+          <!-- Start Item container -->
+          <div class="col-xl-4 col-xxl-3 col-lg-4 col-md-4 col-sm-6">
+            <!-- start Item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-12">
+                  <!-- start Slider -->
+                  <div class="slider">
+                    <img
+                        alt="texture-1"
+                        data-id="1"
+                        src="https://images.unsplash.com/photo-1568438350562-2cae6d394ad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                    >
+                    <img
+                        alt="texture-2"
+                        class="opacity-0"
+                        data-id="2"
+                        src="https://images.unsplash.com/photo-1569742676615-3cbdc18ce09e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    >
+                    <img
+                        alt="texture-3"
+                        class="opacity-0"
+                        data-id="3"
+                        src="https://images.unsplash.com/photo-1570342457319-f17b8f92df09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    >
+
+                    <div class="section" data-id="1">
+                      <div class="indicator indicator_full"></div>
+                    </div>
+                    <div class="section" data-id="2">
+                      <div class="indicator"></div>
+                    </div>
+                    <div class="section" data-id="3">
+                      <div class="indicator"></div>
+                    </div>
+                  </div>
+                  <!-- end Slider -->
+                </div>
+
+                <div class="col-12">
+                  <div class="row item_info">
+                    <div class="col-12">
+                      <p class="item__name mb-0">Бортовой грузовой на шасси DAEWOO NOVUS с КМУ HIAB 190T</p>
+                    </div>
+                    <div class="col-12">
+                      <span class="badge badge__outline_primary">в наличии</span>
+                      <span class="badge badge__outline_danger">лизинг</span>
+                    </div>
+                    <div class="col-12 item__list_specific">
+                      <div class="row">
+                        <ul class="list-unstyled mb-0">
+                          <li class="d-flex justify-content-between">
+                            <span>Год выпуска: </span>
+                            <span class="fw-bold">2012</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Бренд: </span>
+                            <span class="fw-bold">Deawoo</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Высота подъема (м):</span>
+                            <span class="fw-bold">1 000</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Вылет (м): </span>
+                            <span class="fw-bold">23</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-12 item__price">
+                      <div class="d-flex w-100 justify-content-end">
+                        <p class="mb-0 item__old_price">1 500 000 ₽</p>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between item__this_price">
+                        <span>Итого</span>
+                        <span> от 5 500 000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="col-12 item__buy">
+                      <a class="btn btn-danger d-block" href="">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- start Item -->
+          </div>
+          <!-- End Item container -->
+
+
+          <!-- Start Item container -->
+          <div class="col-xl-4 col-xxl-3 col-lg-4 col-md-4 col-sm-6">
+            <!-- start Item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-12">
+                  <!-- start Slider -->
+                  <div class="slider">
+                    <img
+                        alt="texture-1"
+                        data-id="1"
+                        src="https://images.unsplash.com/photo-1568438350562-2cae6d394ad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                    >
+                    <img
+                        alt="texture-2"
+                        class="opacity-0"
+                        data-id="2"
+                        src="https://images.unsplash.com/photo-1569742676615-3cbdc18ce09e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    >
+                    <img
+                        alt="texture-3"
+                        class="opacity-0"
+                        data-id="3"
+                        src="https://images.unsplash.com/photo-1570342457319-f17b8f92df09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    >
+
+                    <div class="section" data-id="1">
+                      <div class="indicator indicator_full"></div>
+                    </div>
+                    <div class="section" data-id="2">
+                      <div class="indicator"></div>
+                    </div>
+                    <div class="section" data-id="3">
+                      <div class="indicator"></div>
+                    </div>
+                  </div>
+                  <!-- end Slider -->
+                </div>
+
+                <div class="col-12">
+                  <div class="row item_info">
+                    <div class="col-12">
+                      <p class="item__name mb-0">Бортовой грузовой на шасси DAEWOO NOVUS с КМУ HIAB 190T</p>
+                    </div>
+                    <div class="col-12">
+                      <span class="badge badge__outline_primary">в наличии</span>
+                      <span class="badge badge__outline_danger">лизинг</span>
+                    </div>
+                    <div class="col-12 item__list_specific">
+                      <div class="row">
+                        <ul class="list-unstyled mb-0">
+                          <li class="d-flex justify-content-between">
+                            <span>Год выпуска: </span>
+                            <span class="fw-bold">2012</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Бренд: </span>
+                            <span class="fw-bold">Deawoo</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Высота подъема (м):</span>
+                            <span class="fw-bold">1 000</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Вылет (м): </span>
+                            <span class="fw-bold">23</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-12 item__price">
+                      <div class="d-flex w-100 justify-content-end">
+                        <p class="mb-0 item__old_price">1 500 000 ₽</p>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between item__this_price">
+                        <span>Итого</span>
+                        <span> от 5 500 000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="col-12 item__buy">
+                      <a class="btn btn-danger d-block" href="">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- start Item -->
+          </div>
+          <!-- End Item container -->
+
+
+          <!-- Start Item container -->
+          <div class="col-xl-4 col-xxl-3 col-lg-4 col-md-4 col-sm-6">
+            <!-- start Item -->
+            <div class="item">
+              <div class="row">
+                <div class="col-12">
+                  <!-- start Slider -->
+                  <div class="slider">
+                    <img
+                        alt="texture-1"
+                        data-id="1"
+                        src="https://images.unsplash.com/photo-1568438350562-2cae6d394ad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                    >
+                    <img
+                        alt="texture-2"
+                        class="opacity-0"
+                        data-id="2"
+                        src="https://images.unsplash.com/photo-1569742676615-3cbdc18ce09e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    >
+                    <img
+                        alt="texture-3"
+                        class="opacity-0"
+                        data-id="3"
+                        src="https://images.unsplash.com/photo-1570342457319-f17b8f92df09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    >
+
+                    <div class="section" data-id="1">
+                      <div class="indicator indicator_full"></div>
+                    </div>
+                    <div class="section" data-id="2">
+                      <div class="indicator"></div>
+                    </div>
+                    <div class="section" data-id="3">
+                      <div class="indicator"></div>
+                    </div>
+                  </div>
+                  <!-- end Slider -->
+                </div>
+
+                <div class="col-12">
+                  <div class="row item_info">
+                    <div class="col-12">
+                      <p class="item__name mb-0">Бортовой грузовой на шасси DAEWOO NOVUS с КМУ HIAB 190T</p>
+                    </div>
+                    <div class="col-12">
+                      <span class="badge badge__outline_primary">в наличии</span>
+                      <span class="badge badge__outline_danger">лизинг</span>
+                    </div>
+                    <div class="col-12 item__list_specific">
+                      <div class="row">
+                        <ul class="list-unstyled mb-0">
+                          <li class="d-flex justify-content-between">
+                            <span>Год выпуска: </span>
+                            <span class="fw-bold">2012</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Бренд: </span>
+                            <span class="fw-bold">Deawoo</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Высота подъема (м):</span>
+                            <span class="fw-bold">1 000</span>
+                          </li>
+
+                          <li class="d-flex justify-content-between">
+                            <span>Вылет (м): </span>
+                            <span class="fw-bold">23</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-12 item__price">
+                      <div class="d-flex w-100 justify-content-end">
+                        <p class="mb-0 item__old_price">1 500 000 ₽</p>
+                      </div>
+                      <div class="d-flex w-100 justify-content-between item__this_price">
+                        <span>Итого</span>
+                        <span> от 5 500 000 ₽</span>
+                      </div>
+                    </div>
+                    <div class="col-12 item__buy">
+                      <a class="btn btn-danger d-block" href="">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- start Item -->
+          </div>
+          <!-- End Item container -->
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
 
 
 <script src="public/js/app.js"></script>

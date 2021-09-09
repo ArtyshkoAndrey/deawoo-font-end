@@ -1,25 +1,12 @@
 //@import "~bootstrap/scss/functions";
 @import "variables";
 @import "~bootstrap";
+@import '~nouislider/dist/nouislider.min.css';
 
-
-//@import "~bootstrap/scss/variables";
-//@import "~bootstrap/scss/mixins";
-//
-//@import "~bootstrap/scss/root";
-//@import "~bootstrap/scss/reboot";
-//@import "~bootstrap/scss/type";
-//
-//@import '~bootstrap/scss/bootstrap-grid';
-//@import '~bootstrap/scss/bootstrap-utilities';
-//@import "~bootstrap/scss/nav";
-//@import "~bootstrap/scss/navbar";
-//@import "~bootstrap/scss/transitions";
-//@import "~bootstrap/scss/buttons";
-
-@import "img";
-@import "button";
+@import "helpers";
 @import 'header';
+@import "page";
+@import "catalog";
 
 @each $name, $width in $grid-breakpoints {
   $gutter: map-get($grid-gutter-widths, $name);

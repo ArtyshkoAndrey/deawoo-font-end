@@ -1,0 +1,19 @@
+@import "../variables";
+
+.badge {
+
+  &[class*="badge__outline"] {
+    background-color: transparent;
+    border-radius: 2px;
+  }
+
+  &.badge__outline_primary {
+    border: 1px solid $primary;
+    color: $primary;
+  }
+
+  &.badge__outline_danger {
+    border: 1px solid $danger;
+    color: $danger;
+  }
+}
