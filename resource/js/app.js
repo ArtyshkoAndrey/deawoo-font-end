@@ -13,17 +13,29 @@ document.addEventListener('DOMContentLoaded', function(){
   //   })
   // }
 
-  let mobile__button_search = document.getElementById('mobile__button_search')
+  let mobileButtonSearch = document.getElementById('mobile__button_search')
+  let firstNavbar = document.getElementById('first__navbar')
+  let collapseFirstNavbar = firstNavbar.querySelector('#collapse__first_navbar')
+  let searchMobileBlock = document.getElementById('search__mobile_block')
 
-  mobile__button_search.addEventListener('click', function (e) {
-    let firstNavbar = document.getElementById('first__navbar')
-    let searchMobileBlock = document.getElementById('search__mobile_block')
-    let collapse = firstNavbar.querySelector('.navbar-collapse')
-    if (collapse.classList.contains('show')) {
+  mobileButtonSearch.addEventListener('click', function (e) {
+    if (collapseFirstNavbar.classList.contains('show')) {
       document.getElementById('toggler').click()
     }
 
     searchMobileBlock.classList.toggle("show")
+  })
+
+  collapseFirstNavbar.addEventListener('show.bs.collapse', function () {
+    if (searchMobileBlock.classList.contains('show')) {
+      searchMobileBlock.classList.toggle("show")
+    }
+    document.body.style.overflowY = 'hidden'
+  })
+
+  collapseFirstNavbar.addEventListener('hidden.bs.collapse', function () {
+    document.body.style.overflowY = 'auto'
+
   })
 
 });

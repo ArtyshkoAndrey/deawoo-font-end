@@ -8137,17 +8137,26 @@ document.addEventListener('DOMContentLoaded', function () {
   //     }
   //   })
   // }
-  var mobile__button_search = document.getElementById('mobile__button_search');
-  mobile__button_search.addEventListener('click', function (e) {
-    var firstNavbar = document.getElementById('first__navbar');
-    var searchMobileBlock = document.getElementById('search__mobile_block');
-    var collapse = firstNavbar.querySelector('.navbar-collapse');
-
-    if (collapse.classList.contains('show')) {
+  var mobileButtonSearch = document.getElementById('mobile__button_search');
+  var firstNavbar = document.getElementById('first__navbar');
+  var collapseFirstNavbar = firstNavbar.querySelector('#collapse__first_navbar');
+  var searchMobileBlock = document.getElementById('search__mobile_block');
+  mobileButtonSearch.addEventListener('click', function (e) {
+    if (collapseFirstNavbar.classList.contains('show')) {
       document.getElementById('toggler').click();
     }
 
     searchMobileBlock.classList.toggle("show");
+  });
+  collapseFirstNavbar.addEventListener('show.bs.collapse', function () {
+    if (searchMobileBlock.classList.contains('show')) {
+      searchMobileBlock.classList.toggle("show");
+    }
+
+    document.body.style.overflowY = 'hidden';
+  });
+  collapseFirstNavbar.addEventListener('hidden.bs.collapse', function () {
+    document.body.style.overflowY = 'auto';
   });
 });
 

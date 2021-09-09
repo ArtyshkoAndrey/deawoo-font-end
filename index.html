@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <title>Главная страница</title>
 </head>
-<body>
+<body style="height: 5000px">
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="first__navbar">
@@ -52,7 +52,7 @@
 
       <div class="collapse navbar-collapse" id="collapse__first_navbar">
         <ul class="navbar-nav d-flex justify-content-between w-100">
-
+          <!-- Location li -->
           <li class="nav-item d-flex align-items-center">
             <a aria-current="page" class="nav-link " href="#">
 
@@ -69,15 +69,14 @@
               <span>Красноярск</span>
             </a>
           </li>
-
+          <!-- end location-->
+          <!-- desktop li -->
           <li class="nav-item d-none d-lg-flex align-items-center">
             <a class="nav-link" href="mailto:PHP-baby@test.ru">PHP-baby@test.ru</a>
           </li>
-
           <li class="nav-item d-none d-lg-flex align-items-center">
             <a class="nav-link" href="tel:+7 (391) 200‒00‒00">+7 (391) 200‒00‒00</a>
           </li>
-
           <li class="nav-item align-content-center d-none d-lg-flex">
             <form class="d-flex">
               <label class="d-none" for="search">Поиск</label>
@@ -87,23 +86,35 @@
               </button>
             </form>
           </li>
-        </ul>
-        <ul class="navbar-nav d-flex d-lg-none justify-content-center h-100">
-          <li class="nav-item">
+          <!-- End desktop li -->
+
+          <!-- Mobile li -->
+          <li class="nav-item mt-auto d-block d-lg-none">
             <a class="nav-link" href="#">
               Спецтехника
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-block d-lg-none">
             <a class="nav-link" href="#">
               Запчасти
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-block d-lg-none">
             <a class="nav-link d-flex" href="#">
               Контакты
             </a>
           </li>
+          <li class="nav-item d-block d-lg-none">
+            <a class="nav-link d-flex" href="#">
+              Контакты
+            </a>
+          </li>
+          <li class="nav-item mb-auto d-block d-lg-none">
+            <a class="nav-link d-flex" href="#">
+              Контакты
+            </a>
+          </li>
+          <!-- End mobile desktop li -->
         </ul>
         <a class="btn btn-danger position-fixed d-block d-lg-none" href="#">
           получить консультацию

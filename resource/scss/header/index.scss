@@ -88,10 +88,16 @@
     @include respond-up(lg) {
       .navbar-collapse {
         opacity: 1;
+        overflow-y: auto;
         transition: opacity 0.4s ease-in;
         -ms-transition: opacity 0.4s ease-in;
         -moz-transition: opacity 0.4s ease-in;
         -webkit-transition: opacity 0.4s ease-in;
+
+        .navbar-nav {
+          overflow-y: auto;
+          height: calc(100% - 50px);
+        }
 
         &:not(.show) {
           opacity: 0;
@@ -143,7 +149,7 @@
   height: 0;
   overflow: hidden;
 
-  position: fixed;
+  position: absolute;
   top: 59px;
   width: 100vw;
   left: 0;
