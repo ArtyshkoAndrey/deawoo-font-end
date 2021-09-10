@@ -1,0 +1,109 @@
+@import "../variables";
+
+// TODO: может быть изменить под высоту контента с боку
+$slider-height: (
+        xs: 260px,
+        sm: 360px,
+        md: 360px,
+        lg: 360px,
+        xl: 430px,
+        xxl: 400px,
+);
+
+.item.item__current {
+  @each $name, $height in $slider-height {
+    @include respond-to($name) {
+      .slider, .slider img {
+        height: $height;
+      }
+      img {
+        height: $height;
+      }
+    }
+  }
+
+.item__current_attributes {
+  color: $primary;
+  padding-left: 0;
+  font-size: 14px;
+  margin-top: 40px;
+
+  @include respond-to(lg) {
+    padding-left: 36px;
+    margin-top: 0;
+  }
+
+  .item__current_attribute_optional {
+    font-size: 20px;
+    line-height: 27px;
+     color: $danger;
+
+
+  }
+
+  .item__current_buy {
+    button {
+      width: 100%;
+      padding: 15px 0px;
+
+      @include respond-to(lg) {
+        width: auto;
+        padding: 17px 20px;
+      }
+    }
+  }
+
+  .item__current_attribute_leasing {
+    color: $primary;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+
+    @include respond-up(lg) {
+      text-align: center;
+      width: 100%;
+      margin-top: 25px;
+      font-size: 16px;
+
+
+    }
+
+    &:hover {
+      color: $danger;
+    }
+  }
+
+  ul {
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 33px;
+
+    @include respond-to(md) {
+      font-size: 20px;
+    }
+
+    li {
+      margin-bottom: 20px;
+
+      .item__current_attribute_name {
+        font-weight: bold;
+      }
+      .item__current_attribute_data {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  h2 {
+    color: $primary;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 65px;
+
+    @include respond-to(md) {
+      font-size: 48px;
+    }
+  }
+}
+
+}
