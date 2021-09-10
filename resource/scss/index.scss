@@ -13,6 +13,7 @@
 @import "footer";
 @import "page";
 @import "catalog";
+@import "success";
 
 @each $name, $width in $grid-breakpoints {
   $gutter: map-get($grid-gutter-widths, $name);
