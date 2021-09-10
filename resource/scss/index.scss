@@ -14,6 +14,7 @@
 @import "page";
 @import "catalog";
 @import "success";
+@import "error";
 
 @each $name, $width in $grid-breakpoints {
   $gutter: map-get($grid-gutter-widths, $name);
