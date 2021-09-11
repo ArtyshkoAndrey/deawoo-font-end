@@ -12224,77 +12224,100 @@ nav[aria-label=breadcrumb] .breadcrumb .breadcrumb-item + .breadcrumb-item::befo
     height: 400px;
   }
 }
-.item.item__current .item__current_attributes {
+.item.item__current .accordion.big__index_accordion .accordion-body {
+  margin-top: 20px;
+  padding: 0;
+}
+.item.item__current .accordion.big__index_accordion .accordion-item {
+  border: 0;
+}
+.item.item__current .accordion.big__index_accordion .accordion-item .accordion-header button {
+  color: #120C5A;
+  outline: 0;
+  box-shadow: none;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+}
+.item.item__current .accordion.big__index_accordion .accordion-item .accordion-header button:not(.collapsed) {
+  border-bottom: 2px solid #120C5A;
+  transition: border 0.25s;
+}
+
+.item__current_attributes {
   color: #120C5A;
   padding-left: 0;
   font-size: 14px;
   margin-top: 40px;
 }
 @media (min-width: 992px) {
-  .item.item__current .item__current_attributes {
+  .item__current_attributes {
     padding-left: 36px;
     margin-top: 0;
   }
 }
-.item.item__current .item__current_attributes .item__current_attribute_optional {
+.item__current_attributes .item__current_attribute_optional {
   font-size: 20px;
   line-height: 27px;
   color: #FC0000;
 }
-.item.item__current .item__current_attributes .item__current_buy button {
+.item__current_attributes .item__current_buy button {
   width: 100%;
   padding: 15px 0px;
 }
 @media (min-width: 992px) {
-  .item.item__current .item__current_attributes .item__current_buy button {
+  .item__current_attributes .item__current_buy button {
     width: auto;
     padding: 17px 20px;
   }
 }
-.item.item__current .item__current_attributes .item__current_attribute_leasing {
+.item__current_attributes .item__current_attribute_leasing {
   color: #120C5A;
   font-size: 20px;
   font-weight: bold;
   margin-left: 20px;
 }
 @media (max-width: 992px) {
-  .item.item__current .item__current_attributes .item__current_attribute_leasing {
+  .item__current_attributes .item__current_attribute_leasing {
     text-align: center;
     width: 100%;
     margin-top: 25px;
     font-size: 16px;
   }
 }
-.item.item__current .item__current_attributes .item__current_attribute_leasing:hover {
+.item__current_attributes .item__current_attribute_leasing:hover {
   color: #FC0000;
 }
-.item.item__current .item__current_attributes ul {
+.item__current_attributes ul {
   font-size: 16px;
   line-height: 27px;
   margin-bottom: 33px;
 }
 @media (min-width: 768px) {
-  .item.item__current .item__current_attributes ul {
+  .item__current_attributes ul {
     font-size: 20px;
   }
 }
-.item.item__current .item__current_attributes ul li {
+.item__current_attributes ul li {
   margin-bottom: 20px;
 }
-.item.item__current .item__current_attributes ul li .item__current_attribute_name {
+.item__current_attributes ul li .item__current_attribute_name {
   font-weight: bold;
 }
-.item.item__current .item__current_attributes ul li .item__current_attribute_data {
+.item__current_attributes ul li .item__current_attribute_data {
   margin-left: 5px;
 }
-.item.item__current .item__current_attributes h2, .item.item__current .item__current_attributes .h2 {
+.item__current_attributes h2, .item__current_attributes .h2 {
   color: #120C5A;
   font-weight: bold;
   font-size: 28px;
   line-height: 65px;
 }
 @media (min-width: 768px) {
-  .item.item__current .item__current_attributes h2, .item.item__current .item__current_attributes .h2 {
+  .item__current_attributes h2, .item__current_attributes .h2 {
     font-size: 48px;
   }
 }

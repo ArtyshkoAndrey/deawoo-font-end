@@ -22,6 +22,36 @@ $slider-height: (
     }
   }
 
+  .accordion.big__index_accordion {
+    .accordion-body {
+      margin-top: 20px;
+      padding: 0;
+    }
+    .accordion-item {
+      border: 0;
+
+      .accordion-header {
+        button {
+          color: $primary;
+          outline: 0;
+          box-shadow: none;
+          font-size: 18px;
+          line-height: 25px;
+          font-weight: bold;
+          border: none;
+          border-bottom: 2px solid transparent;
+          background: transparent;
+
+          &:not(.collapsed) {
+            border-bottom: 2px solid $primary;
+            transition: border 0.25s;
+          }
+        }
+      }
+    }
+  }
+}
+
 .item__current_attributes {
   color: $primary;
   padding-left: 0;
@@ -37,8 +67,6 @@ $slider-height: (
     font-size: 20px;
     line-height: 27px;
      color: $danger;
-
-
   }
 
   .item__current_buy {
@@ -64,8 +92,6 @@ $slider-height: (
       width: 100%;
       margin-top: 25px;
       font-size: 16px;
-
-
     }
 
     &:hover {
@@ -104,6 +130,4 @@ $slider-height: (
       font-size: 48px;
     }
   }
-}
-
 }
